@@ -179,3 +179,8 @@ kbd {
     transition: background-color 0.2s ease;
   }
 }
+
+.developer {
+  display: flex;
+  justify-content: center;
+}
