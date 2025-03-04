@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitTutorial</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>GitTutorial</h1>
+
+      <section>
+        <h2>Переміщення по проекту</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">pwd</code>
+            <span class="description"
+              >— Перегляд вашого поточного розташування;</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">ls</code>
+            <span class="description"
+              >— список папок та файлів у поточній директорії, де було виконано
+              команду;</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">ls -a</code>
+            <span class="description"
+              >— список відкритих та прихованих папок та файлів у поточній
+              директорії, де було виконано команду;</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">cd ~</code>
+            <span class="description"
+              >— перехід до домашньої директорії поточного користувача;</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">cd ..</code>
+            <span class="description"
+              >— Перехід на один рівень вгору в ієрархії файлової системи;</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">cd folder_name</code>
+            <span class="description">— перехід до вибраної папки;</span>
+          </div>
+          <div class="command-container">
+            <span class="number">7.</span>
+            <code class="command">mkdir folder_name</code>
+            <span class="description">— створити папку із вказаним ім'ям.</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Налаштування Git</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command"
+              >git config --global user.name "Name Surname"</code
+            >
+            <span class="description">— задаємо ім'я для комітів</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command"
+              >git config --global user.email "your@email"</code
+            >
+            <span class="description">— задаємо email для комітів</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git config --global color.ui auto</code>
+            <span class="description"
+              >— включаємо кольоровий інтерфейс у терміналі</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git config --list</code>
+            <span class="description">— переглядаємо всі налаштування git</span>
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git help command_name</code>
+            <span class="description">— переглядаємо довідку по команді</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Створення та клонування репозиторіїв</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git init</code>
+            <span class="description"
+              >— ініціалізація нового репозиторію в поточній папці</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git clone url</code>
+            <span class="description"
+              >— копіює репозиторій (папку з файлами) на комп'ютер</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Керування віддаленими репозиторіями</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git remote -v</code>
+            <span class="description"
+              >— переглядаємо список підключених репозиторіїв</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git remote add origin url</code>
+            <span class="description">— додаємо віддалений репозиторій</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git remote remove origin</code>
+            <span class="description">— видаляємо віддалений репозиторій</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Основна робота з файлами</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git add .</code>
+            <span class="description">— додаємо всі зміни до індексу</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git add file_name</code>
+            <span class="description">— додаємо конкретний файл до коміту</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git status</code>
+            <span class="description">— показуємо статус проекту</span>
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git clean -fd</code>
+            <span class="description"
+              >— видаляє всі неконтрольовані (untracked) файли та
+              директорії</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Створення комітів</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git commit -m "commit message"</code>
+            <span class="description">— створюємо коміт з описом</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git commit -am "commit message"</code>
+            <span class="description"
+              >— додаємо всі змінені файли та комітимо одним рядком</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command"
+              >git commit --amend -m "New commit message"</code
+            >
+            <span class="description">— змінюємо останній коміт</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Робота з гілками</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git branch</code>
+            <span class="description">— показуємо список гілок в проекті</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git branch "branchName"</code>
+            <span class="description">— створює нову гілку</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git checkout "branchName"</code>
+            <span class="description">— переходимо на вказану гілку</span>
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git checkout -b "branchName"</code>
+            <span class="description"
+              >— створюємо нову гілку і переходимо на неї</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git branch -d branchName</code>
+            <span class="description">— видаляємо локальну гілку</span>
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">git branch -m old_name new_name</code>
+            <span class="description">— перейменовує гілку</span>
+          </div>
+          <div class="command-container">
+            <span class="number">7.</span>
+            <code class="command">git worktree add path branch</code>
+            <span class="description"
+              >— створює окрему робочу директорію для вказаної гілки</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Синхронізація змін</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git push</code>
+            <span class="description">— відправляємо зміни на GitHub</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git push -u origin branch_name</code>
+            <span class="description"
+              >— публікує гілку на віддаленому репозиторії та встановлює зв'язок
+              для подальших push/pull</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git push origin --delete branchName</code>
+            <span class="description">— видаляємо гілку з GitHub</span>
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git pull</code>
+            <span class="description">— отримуємо останні зміни з GitHub</span>
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git fetch</code>
+            <span class="description">— отримуємо зміни без злиття</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Об'єднання змін</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git merge "branchName"</code>
+            <span class="description"
+              >— зливаємо гілку "branchName" в поточну гілку</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git merge --abort</code>
+            <span class="description">— відміняємо злиття гілок</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git rebase branchName</code>
+            <span class="description"
+              >— змінюємо базову гілку для поточної гілки</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git rebase --abort</code>
+            <span class="description">— скасовуємо операцію rebase</span>
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git rebase --continue</code>
+            <span class="description"
+              >— продовжуємо rebase після вирішення конфліктів</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">git cherry-pick commit_hash</code>
+            <span class="description"
+              >— переносимо зміни з одного коміту в іншу гілку</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Перегляд змін та історії</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git diff</code>
+            <span class="description"
+              >— показує відмінності між поточним станом файлів і останнім
+              комітом</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git diff file_name</code>
+            <span class="description"
+              >— показує відмінності у конкретному файлі</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git diff commit_hash</code>
+            <span class="description"
+              >— показує відмінності між вказаним комітом і поточним станом
+              файлів</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git diff --staged</code>
+            <span class="description"
+              >— показує зміни, які вже були додані в індекс</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git log</code>
+            <span class="description">— показує історію комітів</span>
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">git log --oneline</code>
+            <span class="description"
+              >— компактний вигляд історії комітів в одну строку</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">7.</span>
+            <code class="command">git log --graph</code>
+            <span class="description"
+              >— відображає історію комітів у вигляді графу</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">8.</span>
+            <code class="command">git show commit_hash</code>
+            <span class="description"
+              >— переглядаємо детальну інформацію про коміт</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">9.</span>
+            <code class="command">git reflog</code>
+            <span class="description"
+              >— переглядаємо історію змін у HEAD, навіть після reset</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">10.</span>
+            <code class="command">git blame file_name</code>
+            <span class="description"
+              >— показує, хто і коли вносив зміни в кожен рядок файлу</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">11.</span>
+            <code class="command">git shortlog</code>
+            <span class="description"
+              >— показує згруповану по авторах історію комітів</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Скасування змін</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git restore file_name</code>
+            <span class="description"
+              >— повертаємо файл до останнього збереженого стану</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git restore --staged file_name</code>
+            <span class="description"
+              >— прибираємо конкретний файл з індексу</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git reset HEAD file_name</code>
+            <span class="description"
+              >— скасовуємо додавання файлу до коміту</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git reset --soft commit_hash</code>
+            <span class="description"
+              >— повертаємося до вказаного коміту, залишаючи зміни</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git reset --hard commit_hash</code>
+            <span class="description"
+              >— повертаємося до вказаного коміту та видаляємо всі зміни</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">git revert commit_hash</code>
+            <span class="description"
+              >— скасовуємо зміни конкретного коміту, створюючи новий
+              коміт</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">7.</span>
+            <code class="command">git checkout -- file_name</code>
+            <span class="description"
+              >— відміняє зміни у файлі (альтернатива git restore)</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Тимчасове збереження змін (Stash)</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git stash</code>
+            <span class="description"
+              >— зберігаємо незбережені зміни в буфер обміну</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git stash list</code>
+            <span class="description"
+              >— показує список збережених змін (stashes)</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git stash apply</code>
+            <span class="description"
+              >— вставляємо збережені зміни з буфера обміну</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git stash pop</code>
+            <span class="description"
+              >— застосовує збережені зміни і видаляє їх зі списку stash</span
+            >
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git stash drop</code>
+            <span class="description">— видаляє останній збережений stash</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Робота з тегами</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git tag tag_name</code>
+            <span class="description">— створюємо тег</span>
+          </div>
+          <div class="command-container">
+            <span class="number">2.</span>
+            <code class="command">git tag</code>
+            <span class="description">— показуємо список тегів</span>
+          </div>
+          <div class="command-container">
+            <span class="number">3.</span>
+            <code class="command">git push origin tag_name</code>
+            <span class="description">— відправляємо тег на GitHub</span>
+          </div>
+          <div class="command-container">
+            <span class="number">4.</span>
+            <code class="command">git push --tags</code>
+            <span class="description">— відправляємо всі теги</span>
+          </div>
+          <div class="command-container">
+            <span class="number">5.</span>
+            <code class="command">git tag -d tag_name</code>
+            <span class="description">— видаляємо тег локально</span>
+          </div>
+          <div class="command-container">
+            <span class="number">6.</span>
+            <code class="command">git push origin --delete tag_name</code>
+            <span class="description">— видаляємо тег з GitHub</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Відлагодження та пошук</h2>
+        <div class="command-block">
+          <div class="command-container">
+            <span class="number">1.</span>
+            <code class="command">git bisect</code>
+            <span class="description"
+              >— допомагає знайти коміт, який спричинив баг, методом бінарного
+              пошуку</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <div class="note">
+        <strong>Примітка:</strong> Для того щоб вийти з режиму перегляду комітів
+        використовуйте клавішу <kbd>q</kbd> (стосується команд git log, git
+        show, тощо).
+      </div>
+    </div>
+  </body>
+</html>

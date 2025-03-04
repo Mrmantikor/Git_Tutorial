@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f5f5f5;
+  min-width: 250px; /* Мінімальна ширина для всіх пристроїв */
+}
+
+.container {
+  width: 100%; /* Гумова ширина */
+  max-width: 1200px; /* Максимальна ширина для десктопів */
+  margin: 0 auto;
+  padding: 15px; /* Зменшено відступи для малих екранів */
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Адаптивний розмір шрифту */
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #3498db;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 1.8rem); /* Адаптивний розмір шрифту */
+  color: #2980b9;
+  margin: 25px 0 15px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #e74c3c;
+}
+
+section {
+  margin-bottom: 25px;
+}
+
+.command-block {
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  padding: 10px; /* Зменшено для малих екранів */
+  border: 1px solid #ddd;
+}
+
+.command-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  flex-wrap: wrap; /* Дозволяє перенос на малих екранах */
+}
+
+.number {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-right: 8px;
+  min-width: 20px; /* Зменшено для економії простору */
+  flex-shrink: 0;
+}
+
+.command {
+  background-color: #272822;
+  color: #a6e22e;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-weight: bold;
+  margin-right: 8px;
+  white-space: nowrap;
+  font-size: clamp(0.8rem, 2.5vw, 1rem); /* Адаптивний розмір шрифту */
+}
+
+.description {
+  color: #34495e;
+  font-size: clamp(0.85rem, 2.5vw, 1rem); /* Адаптивний розмір шрифту */
+}
+
+.note {
+  margin-top: 30px;
+  padding: 12px;
+  background-color: #fff5e6;
+  border-left: 4px solid #f39c12;
+  border-radius: 4px;
+  font-size: clamp(0.85rem, 2.5vw, 1rem);
+}
+
+kbd {
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  color: #333;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 0.85em;
+  font-weight: bold;
+  padding: 2px 4px;
+  white-space: nowrap;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .command-container {
+    flex-direction: column; /* Вертикальне вирівнювання на планшетах */
+  }
+
+  .command {
+    margin-bottom: 5px;
+    display: inline-block;
+  }
+
+  .number {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+  }
+
+  h2 {
+    margin: 20px 0 10px;
+  }
+
+  .command-block {
+    padding: 8px;
+  }
+
+  .command-container {
+    margin-bottom: 8px;
+  }
+
+  .command {
+    padding: 2px 5px;
+  }
+}
+
+@media (min-width: 250px) and (max-width: 359px) {
+  .command-container {
+    flex-direction: column;
+  }
+
+  .command,
+  .description {
+    font-size: 0.8rem; /* Фіксований розмір для дуже малих екранів */
+  }
+
+  .note {
+    padding: 10px;
+  }
+}
+
+/* Hover ефекти (вимикаємо на мобільних для кращого UX) */
+@media (hover: hover) {
+  .command-container:hover {
+    background-color: #e9f7fe;
+    transition: background-color 0.2s ease;
+  }
+
+  .command:hover {
+    background-color: #373832;
+    transition: background-color 0.2s ease;
+  }
+}
